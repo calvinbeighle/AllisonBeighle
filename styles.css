@@ -1,20 +1,74 @@
+@font-face {
+    font-family: 'Origin';
+    src: url('fonts/Origin-Bold-Retro-Sans-Serif.ttf') format('truetype');
+}
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     overflow: hidden;
+    text-align: center;
 }
 
 .title {
+    color: white;
+    font-family: 'Origin', sans-serif;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    transition: top 2.5s ease-in-out, transform 2.5s ease-in-out;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.title.glide {
+    top: 30%;
+    transform: translate(-50%, 0);
+    margin-bottom: 40px;
+}
+
+#fadeInText {
+    font-family: 'Origin', sans-serif;
+    font-size: 1.25em;
+    font-style: italic;
     color: white;
-    font-family: 'Bebas Neue', sans-serif; /* Use Bebas Neue */
-    font-size: 6em; /* Adjust size as needed */
-    font-weight: bold;
-    text-transform: uppercase; /* Ensure all text is uppercase */
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s ease-in-out;
+    margin-top: 60px;
+}
+
+#fadeInText.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#fadeInText p:first-child {
     white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+#cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+audio {
+    display: none;
 }

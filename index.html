@@ -3,74 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @font-face {
-            font-family: 'Origin';
-            src: url('fonts/Origin-Bold-Retro-Sans-Serif.ttf') format('truetype');
-        }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background-color: black;
-            overflow: hidden;
-        }
-
-        .title {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-family: 'Origin', sans-serif;
-            font-size: 3.5em;
-            font-weight: bold;
-            text-transform: uppercase;
-            white-space: nowrap;
-            letter-spacing: 0.05em;
-            transition: top 2.5s ease-in-out, transform 2.5s ease-in-out;
-        }
-
-        .title.glide {
-            top: 200px;
-            transform: translate(-50%, 0);
-        }
-
-        #cursor {
-            display: inline-block;
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            from, to { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        #fadeInText {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-family: 'Origin';
-            font-size: 1.5em; /* Smaller font size */
-            text-align: center;
-            opacity: 0;
-            visibility: hidden;
-            white-space: nowrap;
-            transition: opacity 2s ease-in-out;
-        }
-
-        #fadeInText.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        audio {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
@@ -81,11 +14,11 @@
     <div id="fadeInText">
         <p>20. 2-0. TWO ZERO. TWO NIGHTS ANYWHERE IN EUROPE</p>
         <p>THERE IS NO BUDGET. DON’T FUCK ME</p>
-        <p>LOVE YOU AND AM PROUD OF YOU ALWAYS</p>
+        <p>PROUD OF YOU ALWAYS</p>
     </div>
 
-    <audio autoplay loop>
-        <source src="YourMusicFile.mp3" type="audio/mp3">
+    <audio id="backgroundMusic" loop>
+        <source src="HateItOrLoveIt.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
@@ -95,8 +28,24 @@
       const text = "HAPPY BIRTHDAY ALLISON";
       let index = 0;
 
+      window.onload = () => {
+        // Play the music as soon as the website loads
+        const music = document.getElementById("backgroundMusic");
+        music.play();
+
+        // Make the cursor blink twice before starting the typing animation
+        setTimeout(() => {
+            type(); // Start typing after 2 seconds
+        }, 2000);
+      };
+
       function type() {
         if (index < text.length) {
+          // Stop cursor blinking when the first character is typed
+          if (index === 0) {
+            cursor.style.animation = 'none'; // Remove the blinking animation
+          }
+
           typingText.innerHTML += text.charAt(index);
           index++;
           setTimeout(type, 275);
@@ -142,10 +91,6 @@
             document.getElementById('fadeInText').classList.add('visible');
         }, 5000);
       }
-
-      window.onload = () => {
-        setTimeout(type, 2000);
-      };
     </script>
 </body>
 </html>
