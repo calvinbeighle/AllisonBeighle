@@ -87,8 +87,8 @@ audio {
     }
 
     #fadeInText {
-        font-size: 1em;
-        margin-top: 80px;
+        font-size: 0.8em;
+        margin-top: 100px;
     }
 
     #fadeInText p {
