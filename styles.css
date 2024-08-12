@@ -23,6 +23,7 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    white-space: normal; /* Allow text to wrap */
 }
 
 .title.glide {
@@ -41,6 +42,7 @@ body, html {
     visibility: hidden;
     transition: opacity 2s ease-in-out;
     margin-top: 40px;
+    white-space: normal; /* Allow text to wrap */
 }
 
 #fadeInText.visible {
@@ -49,7 +51,6 @@ body, html {
 }
 
 #fadeInText p:first-child {
-    white-space: nowrap;
     margin-bottom: 20px;
 }
 
