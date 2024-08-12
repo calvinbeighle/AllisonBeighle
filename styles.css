@@ -14,27 +14,27 @@ body, html {
 .title {
     color: white;
     font-family: 'Origin', sans-serif;
-    font-size: 2.25em; /* Slightly reduced font size */
+    font-size: 2.5em;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: top 2.5s ease-in-out, transform 2.5s ease-in-out;
     position: fixed;
-    top: 40%; /* Adjusted top value */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    white-space: normal; /* Allow text to wrap */
+    white-space: normal;
 }
 
 .title.glide {
-    top: 30%; /* Adjust this if necessary */
+    top: 30%;
     transform: translate(-50%, 0);
     margin-bottom: 40px;
 }
 
 #fadeInText {
     font-family: 'Origin', sans-serif;
-    font-size: 1.25em; /* Base font size */
+    font-size: 1.25em;
     font-style: italic;
     color: white;
     text-align: center;
@@ -42,7 +42,7 @@ body, html {
     visibility: hidden;
     transition: opacity 2s ease-in-out;
     margin-top: 40px;
-    white-space: normal; /* Allow text to wrap */
+    white-space: normal;
 }
 
 #fadeInText.visible {
@@ -71,22 +71,23 @@ audio {
 #Calvin {
     display: block;
     margin: 20px auto 0 auto;
-    width: 20%; /* Adjusted for a more proportional size */
+    width: 20%;
     height: auto;
 }
 
 /* Media Queries for smaller screens */
 @media (max-width: 600px) {
     .title {
-        font-size: 2em; /* Slightly smaller for mobile */
+        font-size: 1.75em; /* Reduce font size for mobile */
+        top: 40%; /* Adjust top position */
     }
 
     #fadeInText {
-        font-size: 1em; /* Smaller font for mobile */
-        margin-top: 20px;
+        font-size: 1em; /* Reduce font size for mobile */
+        margin-top: 30px;
     }
 
     #Calvin {
-        width: 30%; /* Image scales better on smaller screens */
+        width: 40%; /* Adjust image size for mobile */
     }
 }
