@@ -91,7 +91,7 @@ audio {
 
     #fadeInText {
         font-size: 1em; /* Reduce font size for mobile */
-        margin-top: 60px; /* Increase margin-top to give space */
+        margin-top: 80px; /* Increase margin-top to give space */
     }
 
     #fadeInText p {
