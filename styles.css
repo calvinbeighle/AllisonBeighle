@@ -79,12 +79,12 @@ audio {
 /* Media Queries for smaller screens */
 @media (max-width: 600px) {
     .title {
-        font-size: 1.5em; /* Reduce font size for mobile */
+        font-size: 2.5em; /* Reduce font size for mobile */
         top: 30%; /* Adjust top position */
     }
 
     #fadeInText {
-        font-size: 1.0em; /* Reduce font size for mobile */
+        font-size: 0.75em; /* Reduce font size for mobile */
         margin-top: 100px;
     }
 
