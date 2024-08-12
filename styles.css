@@ -14,20 +14,20 @@ body, html {
 .title {
     color: white;
     font-family: 'Origin', sans-serif;
-    font-size: 2.5em; /* Fixed base size */
+    font-size: 2.25em; /* Slightly reduced font size */
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: top 2.5s ease-in-out, transform 2.5s ease-in-out;
     position: fixed;
-    top: 50%;
+    top: 40%; /* Adjusted top value */
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: normal; /* Allow text to wrap */
 }
 
 .title.glide {
-    top: 30%;
+    top: 30%; /* Adjust this if necessary */
     transform: translate(-50%, 0);
     margin-bottom: 40px;
 }
