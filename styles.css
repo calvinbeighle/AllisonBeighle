@@ -27,7 +27,7 @@ body, html {
 }
 
 .title.glide {
-    top: 20%; /* Lower this so that it doesn't interfere with other elements */
+    top: 15%; /* Lower this so that it doesn't interfere with other elements */
     transform: translate(-50%, 0);
     margin-bottom: 40px;
 }
@@ -92,7 +92,7 @@ audio {
     }
 
     #fadeInText p {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     #Calvin {
