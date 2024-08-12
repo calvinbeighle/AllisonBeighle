@@ -34,7 +34,7 @@ body, html {
 
 #fadeInText {
     font-family: 'Origin', sans-serif;
-    font-size: 1.25em;
+    font-size: 1.0em;
     font-style: italic;
     color: white;
     text-align: center;
@@ -83,11 +83,11 @@ audio {
     }
 
     #fadeInText {
-        font-size: 0.5em; /* Reduce font size for mobile */
+        font-size: 1.0em; /* Reduce font size for mobile */
         margin-top: 30px;
     }
 
     #Calvin {
-        width: 40%; /* Adjust image size for mobile */
+        width: 30%; /* Adjust image size for mobile */
     }
 }
