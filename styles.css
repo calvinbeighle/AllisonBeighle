@@ -84,7 +84,7 @@ audio {
     }
 
     #fadeInText {
-        font-size: 1.4em; /* Reduce font size for mobile */
+        font-size: 1.0em; /* Reduce font size for mobile */
         margin-top: 100px;
     }
 
