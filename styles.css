@@ -27,7 +27,7 @@ body, html {
 }
 
 .title.glide {
-    top: 25%;
+    top: 20%; /* Lower this so that it doesn't interfere with other elements */
     transform: translate(-50%, 0);
     margin-bottom: 40px;
 }
@@ -41,7 +41,7 @@ body, html {
     opacity: 0;
     visibility: hidden;
     transition: opacity 2s ease-in-out;
-    margin-top: 70px;
+    margin-top: 50px; /* Adjust this to reduce overlap */
     white-space: normal;
 }
 
@@ -58,6 +58,12 @@ body, html {
 #cursor {
     display: inline-block;
     animation: blink 1s step-end infinite;
+    position: fixed; /* Position fixed for centering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Correct centering */
+    font-size: 2.5em; /* Adjust size to match your title */
+    color: white; /* Ensure it's visible */
 }
 
 @keyframes blink {
@@ -79,13 +85,13 @@ audio {
 /* Media Queries for smaller screens */
 @media (max-width: 600px) {
     .title {
-        font-size: 2em; /* Further reduce font size for mobile */
-        top: 15%; /* Adjust top position */
+        font-size: 1.75em; /* Further reduce font size for mobile */
+        top: 20%; /* Adjust top position to give more space */
     }
 
     #fadeInText {
         font-size: 1em; /* Reduce font size for mobile */
-        margin-top: 120px; /* Increase margin-top for more space */
+        margin-top: 60px; /* Increase margin-top to give space */
     }
 
     #fadeInText p {
@@ -94,5 +100,9 @@ audio {
 
     #Calvin {
         width: 40%; /* Adjust image size for mobile */
+    }
+
+    #cursor {
+        font-size: 1.75em; /* Adjust cursor size for mobile */
     }
 }
