@@ -27,7 +27,7 @@ body, html {
 }
 
 .title.glide {
-    top: 20%;
+    top: 25%;
     transform: translate(-50%, 0);
     margin-bottom: 40px;
 }
@@ -41,14 +41,14 @@ body, html {
     opacity: 0;
     visibility: hidden;
     transition: opacity 2s ease-in-out;
-    margin-top: 40px;
+    margin-top: 70px;
     white-space: normal;
 }
 
 #fadeInText.visible {
     opacity: 1;
     visibility: visible;
-    transition-delay: 3.0s;
+    transition-delay: 3.2s;
 }
 
 #fadeInText p:first-child {
