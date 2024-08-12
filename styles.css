@@ -80,8 +80,8 @@ audio {
 @media (max-width: 600px) {
     .title {
         font-size: 2.5em; /* Reduce font size for mobile */
-        top: 20%; /* Adjust top position */
-    }
+        top: 40%; /* Adjust top position */
+    } 
 
     #fadeInText {
         font-size: 1.1em; /* Reduce font size for mobile */
