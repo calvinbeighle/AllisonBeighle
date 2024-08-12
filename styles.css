@@ -58,12 +58,8 @@ body, html {
 #cursor {
     display: inline-block;
     animation: blink 1s step-end infinite;
-    position: fixed; /* Position fixed for centering */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Correct centering */
-    font-size: 2.5em; /* Adjust size to match your title */
-    color: white; /* Ensure it's visible */
+    position: relative; /* Position relative for better control */
+    top: -50%; /* Adjust the cursor's vertical position */
 }
 
 @keyframes blink {
@@ -85,24 +81,26 @@ audio {
 /* Media Queries for smaller screens */
 @media (max-width: 600px) {
     .title {
-        font-size: 1.75em; /* Further reduce font size for mobile */
-        top: 15%; /* Adjust top position to give more space */
+        font-size: 1.75em;
+        top: 50%; /* Center vertically on mobile */
+        transform: translate(-50%, -50%); /* Center horizontally and vertically */
     }
 
     #fadeInText {
-        font-size: 1em; /* Reduce font size for mobile */
-        margin-top: 80px; /* Increase margin-top to give space */
+        font-size: 1em;
+        margin-top: 80px;
     }
 
     #fadeInText p {
-        margin-bottom: 20px; /* Ensure there's spacing between paragraphs */
+        margin-bottom: 20px;
     }
 
     #Calvin {
-        width: 40%; /* Adjust image size for mobile */
+        width: 40%;
     }
 
     #cursor {
-        font-size: 1.75em; /* Adjust cursor size for mobile */
+        top: 0; /* Reset top position */
+        line-height: 1; /* Ensure it's vertically aligned with the text */
     }
 }
