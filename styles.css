@@ -79,16 +79,20 @@ audio {
 /* Media Queries for smaller screens */
 @media (max-width: 600px) {
     .title {
-        font-size: 2.5em; /* Reduce font size for mobile */
-        top: 10%; /* Adjust top position */
-    } 
+        font-size: 2em; /* Further reduce font size for mobile */
+        top: 15%; /* Adjust top position */
+    }
 
     #fadeInText {
-        font-size: 1.1em; /* Reduce font size for mobile */
-        margin-top: 100px;
+        font-size: 1em; /* Reduce font size for mobile */
+        margin-top: 120px; /* Increase margin-top for more space */
+    }
+
+    #fadeInText p {
+        margin-bottom: 20px; /* Ensure there's spacing between paragraphs */
     }
 
     #Calvin {
-        width: 30%; /* Adjust image size for mobile */
+        width: 40%; /* Adjust image size for mobile */
     }
 }
