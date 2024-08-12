@@ -12,7 +12,7 @@
     </div>
 
     <div id="fadeInText">
-        <p>20. 2-0. TWO ZERO. TWO NIGHTS ANYWHERE IN EUROPE</p>
+        <p>20. 2-0. TWO ZERO. </p> TWO NIGHTS ANYWHERE IN EUROPE</p>
         <p>PROUD OF YOU ALWAYS</p></p>
         <img src="Calvin.png" alt="Calvin" id="Calvin">
     </div>
@@ -24,73 +24,78 @@
 
     <script>
       const typingText = document.getElementById("typingText");
-      const cursor = document.getElementById("cursor");
-      const text = "HAPPY BIRTHDAY ALLISON";
-      let index = 0;
+const cursor = document.getElementById("cursor");
+const text = "HAPPY BIRTHDAY ALLISON";
+let index = 0;
 
-      window.onload = () => {
-        // Play the music as soon as the website loads
-        const music = document.getElementById("backgroundMusic");
-        music.play();
+window.onload = () => {
+    // Cursor starts blinking immediately
+    cursor.style.animation = 'blink 1s step-end infinite';
 
-        // Make the cursor blink twice before starting the typing animation
-        setTimeout(() => {
-            type(); // Start typing after 2 seconds
-        }, 2000);
-      };
+    // Wait for a click event to start the music and animation
+    document.body.addEventListener('click', startAnimation, { once: true });
+};
 
-      function type() {
-        if (index < text.length) {
-          // Stop cursor blinking when the first character is typed
-          if (index === 0) {
+function startAnimation() {
+    const music = document.getElementById("backgroundMusic");
+    music.play(); // Start the music
+
+    // Start the typing animation after the click
+    type();
+}
+
+function type() {
+    if (index < text.length) {
+        // Stop cursor blinking when the first character is typed
+        if (index === 0) {
             cursor.style.animation = 'none'; // Remove the blinking animation
-          }
+        }
 
-          typingText.innerHTML += text.charAt(index);
-          index++;
-          setTimeout(type, 275);
-        } else {
-          cursor.style.display = 'none';
-          setTimeout(() => {
+        typingText.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 275);
+    } else {
+        cursor.style.display = 'none';
+        setTimeout(() => {
             document.querySelector('.title').classList.add('glide');
             setTimeout(triggerConfetti, 3500);
-          }, 1000);
-        }
-      }
+        }, 1000);
+    }
+}
 
-      function triggerConfetti() {
-        confetti({
-            particleCount: 150,
-            spread: 120,
-            startVelocity: 30,
-            origin: { y: 0 }
-        });
+function triggerConfetti() {
+    confetti({
+        particleCount: 150,
+        spread: 120,
+        startVelocity: 30,
+        origin: { y: 0 }
+    });
 
-        confetti({
-            particleCount: 150,
-            spread: 120,
-            startVelocity: 30,
-            origin: { y: 1 }
-        });
+    confetti({
+        particleCount: 150,
+        spread: 120,
+        startVelocity: 30,
+        origin: { y: 1 }
+    });
 
-        confetti({
-            particleCount: 150,
-            spread: 120,
-            startVelocity: 30,
-            origin: { x: 0, y: 0.5 }
-        });
+    confetti({
+        particleCount: 150,
+        spread: 120,
+        startVelocity: 30,
+        origin: { x: 0, y: 0.5 }
+    });
 
-        confetti({
-            particleCount: 150,
-            spread: 120,
-            startVelocity: 30,
-            origin: { x: 1, y: 0.5 }
-        });
+    confetti({
+        particleCount: 150,
+        spread: 120,
+        startVelocity: 30,
+        origin: { x: 1, y: 0.5 }
+    });
 
-        setTimeout(() => {
-            document.getElementById('fadeInText').classList.add('visible');
-        }, 5000);
-      }
+    setTimeout(() => {
+        document.getElementById('fadeInText').classList.add('visible');
+    }, 5000);
+}
     </script>
 </body>
 </html>
