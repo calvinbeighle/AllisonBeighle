@@ -48,7 +48,7 @@ body, html {
 #fadeInText.visible {
     opacity: 1;
     visibility: visible;
-    transition-delay: 2.9s;
+    transition-delay: 3.0s;
 }
 
 #fadeInText p:first-child {
