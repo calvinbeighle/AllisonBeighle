@@ -34,7 +34,7 @@ body, html {
 
 #fadeInText {
     font-family: 'Origin', sans-serif;
-    font-size: 1.0em;
+    font-size: 1.3em;
     font-style: italic;
     color: white;
     text-align: center;
@@ -48,7 +48,7 @@ body, html {
 #fadeInText.visible {
     opacity: 1;
     visibility: visible;
-    transition-delay: 1s;
+    transition-delay: 2.9s;
 }
 
 #fadeInText p:first-child {
@@ -84,7 +84,7 @@ audio {
     }
 
     #fadeInText {
-        font-size: 1.0em; /* Reduce font size for mobile */
+        font-size: 1.3em; /* Reduce font size for mobile */
         margin-top: 100px;
     }
 
