@@ -48,7 +48,7 @@ body, html {
 #fadeInText.visible {
     opacity: 1;
     visibility: visible;
-    transition-delay: 5.7s;
+    transition-delay: 6s;
 }
 
 #fadeInText p:first-child {
@@ -87,7 +87,7 @@ audio {
     }
 
     #fadeInText {
-        font-size: 1em;
+        font-size: 0.8em;
         margin-top: 100px;
     }
 
